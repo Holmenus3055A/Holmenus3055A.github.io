@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: #0037ff; /* Azul intenso */
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Sin barras de desplazamiento */
+
+    /* Fondo cubierto con la imagen Zynez.png */
+    background-image: url('Archivos/Zynez.png');
+    background-size: 100px 100px; /* Ajusta el tamaño de cada imagen */
+    background-repeat: repeat; /* Repite la imagen en todo el fondo */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Altura de la ventana completa */
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto y la imagen */
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+}
+
+h1.changing-text {
+    font-size: 3em;
+    font-weight: bold;
+    animation: colorChange 5s infinite;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0037ff;
+    margin: 5px 0;
+}
+
+.custom-container {
+    background-color: black;
+    border: 2px solid #0037ff; /* Bordes azules */
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0; /* Espacio vacío alrededor */
+    width: 50%; /* Ajustar el ancho del contenedor */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-text {
+    color: #0037ff; /* Texto azul */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: black;
+    color: #0037ff;
+    border: 2px solid #0037ff;
+    padding: 20px 40px;
+    margin: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    animation: buttonPulse 1.5s infinite;
+}
+
+button:hover {
+    background-color: #0037ff;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0037ff;
+    margin-bottom: 10px;
+}
+
+.social-info div {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.instagram {
+    color: #ff69b4;
+}
+
+.discord {
+    color: #8a2be2;
+}
+
+.contact-info {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0037ff;
+    text-align: center;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #470288;
+    }
+    33% {
+        color: #0707a8;
+    }
+    66% {
+        color: #027ea3;
+    }
+    100% {
+        color: #470288;
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Botón oculto en la esquina inferior derecha */
+.secret-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5cm; /* Tamaño del botón ajustado a 3.5 cm */
+    color: #0037ff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4; /* Más visible que antes */
+    transition: opacity 0.3s;
+}
+
+.secret-button:hover {
+    opacity: 1; /* Totalmente visible al pasar el ratón */
+}
