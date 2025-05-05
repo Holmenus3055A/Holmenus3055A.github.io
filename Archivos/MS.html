@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto MS</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@400&display=swap">
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Roboto', sans-serif;
+      color: #FFDFC8;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .top-section {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: #FFDFC8;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #FFDFC8;
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+
+    .progress-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-46%, -70%);
+      width: 80%;
+      max-width: 600px;
+      flex-direction: column;
+    }
+
+    .progress-timeline {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .progress-timeline::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #FFDFC8;
+      opacity: 0; /* Línea horizontal invisible */
+      z-index: 0;
+    }
+
+    .milestone {
+      text-align: center;
+      position: relative;
+      width: 33.33%;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    .milestone span {
+      position: relative;
+      font-size: 0.9em;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .milestone::after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 12px;
+      width: 2px;
+      background-color: #FFDFC8;
+      opacity: 0; /* Líneas verticales invisibles */
+      z-index: 2;
+    }
+
+    .milestone.start span {
+      color: #FFDFC8;
+    }
+    .milestone.end span {
+      color: #5900FF;
+    }
+
+    .milestone.middle span {
+      color: #0001BA;
+    }
+
+    .progress-bar {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      background: transparent;
+      border: 3px solid #FFDFC8;
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress-fill {
+      background-color: #FFDFC8;
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .progress-num {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #FFDFC8;
+      margin-left: 10px;
+      white-space: nowrap;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .bottom-links {
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.link-right, .link-left {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.link-right {
+  color: #FFDFC8;
+}
+
+.link-left {
+  color: #0001BA;
+}
+
+  </style>
+</head>
+<body>
+  <div class="top-section">
+    <h1>Proyecto MS</h1>
+    <p>La meta de 210 suscriptores ha sido alcanzada</p>
+    <p>El proyecto MarcosSunglasses está en desarrollo</p>
+  </div>
+
+  <div class="progress-wrapper">
+    <div class="progress-timeline">
+      <div class="milestone start"><span>Revelación de MarcosSunglasses</span></div>
+      <div class="milestone middle"><span>Voice reveal</span></div>
+      <div class="milestone end"><span>Una nueva era</span></div>
+    </div>
+    <div style="display: flex; align-items: center; width: 100%;">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span id="progress-num" class="progress-num">0%</span>
+    </div>
+  </div>
+
+  <script>
+    const progress = 40;
+    document.querySelector('.progress-fill').style.width = progress + '%';
+    document.getElementById('progress-num').textContent = `${progress}%`;
+  </script>
+
+</body>
+<div class="bottom-links">
+  <a href="https://marcossunglasses.github.io" class="link-right">
+    Redirigir a MarcosSunglasses →
+  </a>
+  <a href="https://holmenus3055a.github.io" class="link-left">
+    ← Redirigir a Holmen 3055-A
+  </a>
+</div>
+
+</html>
