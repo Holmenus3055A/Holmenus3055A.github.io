@@ -8,15 +8,11 @@ body {
     background-color: black;
     font-family: Arial, sans-serif;
     color: #0037ff; /* Azul intenso */
-    height: 100vh; /* Altura completa de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Sin barras de desplazamiento */
 
     /* Fondo cubierto con la imagen Zynez.png */
     background-image: url('Archivos/Zynez.png');
     background-size: 100px 100px; /* Ajusta el tamaño de cada imagen */
+    background-position: top left; 
     background-repeat: repeat; /* Repite la imagen en todo el fondo */
 }
 
@@ -24,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh; /* Altura de la ventana completa */
     width: 100%;
 }
 
@@ -180,4 +175,3 @@ button:hover {
     opacity: 1; /* Visibilidad completa */
     transition: opacity 0.3s;
 }
-
